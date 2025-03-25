@@ -1,0 +1,46 @@
+{
+  "display": "English",
+
+  "Metadata": {
+    "title": "Felipe Vaz - Portfolio | Front-End Developer",
+    "description": "Hi, I'm Felipe Vaz! Front-End Developer passionate about creating creative and high-performance interfaces."
+  },
+
+  "Profile": {
+    "role": "Front-End Developer"
+  },
+
+  "sections": {
+    "Header": {
+      "title": "Creativity & Purpose.",
+      "subtitle": "Exploring out-of-the-box challenges with effective and technical solutions.",
+      "githubButtonLabel": "Access my GitHub",
+
+      "terminal": {
+        "display": "Terminal",
+        "lines": {
+          "1st": "Welcome to my portfolio",
+          "2nd": "Use ↑ ↓ to navigate and 'Enter' to select a command."
+        },
+        "options": {
+          "1st": "About me",
+          "2nd": "Technologies",
+          "3rd": "Projects",
+          "4th": "Contact"
+        }
+      }
+    },
+    "About": {
+      "display": "About me",
+      "content": "Fascinated by Web Development, I love transforming ideas into interactive and functional interfaces. Since I started programming, I strive to create solutions that break the conventional, always exploring new ways to combine creativity and technology.\nMy name is Felipe, I’m 20 years old, and I'm looking for my first job experience. I believe programming is much more than code — it’s a tool to innovate, solve problems, and impact people."
+    },
+    "Technologies": {
+      "display": "Technologies"
+    },
+    "Projects": {
+      "display": "Projects",
+      "viewButtonLabel": "View",
+      "repositoryButtonLabel": "GitHub Repository"
+    }
+  }
+}

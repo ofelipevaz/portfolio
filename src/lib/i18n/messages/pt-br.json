@@ -1,0 +1,46 @@
+{
+  "display": "Português",
+
+  "Metadata": {
+    "title": "Felipe Vaz - Portifólio | Desenvolvedor Front-End",
+    "description": "Oi, eu sou Felipe Vaz! Desenvolvedor Front-End apaixonado por criar interfaces criativas e performáticas."
+  },
+
+  "Profile": {
+    "role": "Desenvolvedor Front-End"
+  },
+
+  "sections": {
+    "Header": {
+      "title": "Criatividade & Propósito.",
+      "subtitle": "Explorando desafios fora da caixinha, com soluções eficazes e técnicas.",
+      "githubButtonLabel": "Acessar meu GitHub",
+
+      "terminal": {
+        "display": "Terminal",
+        "lines": {
+          "1st": "Seja bem vindo ao meu portifólio",
+          "2nd": "Use ↑ ↓ para navegar e “Enter” para selecionar um comando."
+        },
+        "options": {
+          "1st": "Sobre mim",
+          "2nd": "Tecnologias",
+          "3rd": "Projetos",
+          "4th": "Contato"
+        }
+      }
+    },
+    "About": {
+      "display": "Sobre mim",
+      "content": "Fascinado por Desenvolvimento Web, adoro transformar ideias em interfaces interativas e funcionais. Desde que comecei a programar, busco criar soluções que fogem do convencional, sempre explorando novas formas de unir criatividade e tecnologia.\nMe chamo Felipe, tenho 20 anos e estou em busca da minha primeira experiência no mercado de trabalho. Acredito que a programação vai muito além do código — ela é uma ferramenta para inovar, resolver problemas e impactar pessoas."
+    },
+    "Technologies": {
+      "display": "Tecnologias"
+    },
+    "Projects": {
+      "display": "Projetos",
+      "viewButtonLabel": "Visualizar",
+      "repositoryButtonLabel": "Repositório GitHub"
+    }
+  }
+}
