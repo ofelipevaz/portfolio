@@ -5,7 +5,7 @@ import { getLocaleFromCookies } from "@/lib/i18n/utils"
 import type { Metadata } from "next"
 import { fira_mono, inter } from "@/constants/font"
 
-import "./globals.css"
+import "./globals.scss"
 import { ThemeProvider } from "next-themes"
 
 export async function generateMetadata(): Promise<Metadata> {
