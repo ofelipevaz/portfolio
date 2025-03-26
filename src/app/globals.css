@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
   font-size: 16px;
-  --background: #ffffff;
-  --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --color-background: #fbfbfb;
+}
+
+@layer theme {
+  @variant dark {
+    --color-background: #1f1f1f;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter)
+  @apply bg-background font-inter;
 }

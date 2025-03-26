@@ -6,6 +6,7 @@ import type { Metadata } from "next"
 import { inter } from "@/constants/font"
 
 import "./globals.css"
+import { ThemeProvider } from "next-themes"
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocaleFromCookies()
@@ -25,9 +26,11 @@ export default async function RootLayout({
   const locale = await getLocale()
 
   return (
-    <html lang={locale}>
+    <html suppressHydrationWarning lang={locale}>
       <body className={`${inter.variable} antialiased`}>
-        <NextIntlClientProvider {...rest} />
+        <ThemeProvider defaultTheme="dark" attribute="class">
+          <NextIntlClientProvider {...rest} />
+        </ThemeProvider>
       </body>
     </html>
   )
