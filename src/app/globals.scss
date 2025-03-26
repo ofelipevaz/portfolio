@@ -52,5 +52,19 @@
 }
 
 body {
-  @apply bg-background font-inter;
+  @apply bg-background text-default font-inter min-h-screen relative;
+
+  position: relative;
+  
+  &::before {
+    @apply absolute block pointer-events-none w-full h-full top-0 left-0 opacity-[0.05] dark:opacity-[0.025];
+
+    content: '';
+    z-index: -1;
+
+    background-image: url(../../public/texture-overlay.jpg);
+    background-blend-mode: color-dodge;
+    background-size: cover;
+    background-repeat: repeat;
+  }
 }
