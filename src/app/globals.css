@@ -1,10 +1,6 @@
-@use "tailwindcss";
+@import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
-
-:root {
-  font-size: 16px;
-}
 
 @theme inline {
   --font-inter: var(--font-inter);
@@ -13,53 +9,57 @@
 
 @theme {
   --color-background: #fbfbfb;
-  --color-primary: #2BC570;
+  --color-primary: #2bc570;
 
-  --color-heading: #2F2E2E;
+  --color-heading: #2f2e2e;
   --color-default: #424242;
   --color-muted: #848484;
   --color-disabled: #989898;
 
-  --color-weak-card: #EEEEEE;
-  --color-border: #DBDBDB;
+  --color-weak-card: #eeeeee;
+  --color-border: #dbdbdb;
 
   --color-terminal-background: #171717;
 
   --color-btn-primary-background: #242424;
-  --color-btn-primary-display: #FFFFFF;
-  --color-btn-background: #0E0E0E;
-  --color-btn-background-display: #FFFFFF;
+  --color-btn-primary-display: #ffffff;
+  --color-btn-background: #0e0e0e;
+  --color-btn-background-display: #ffffff;
 }
 
 @layer theme {
   @variant dark {
-    --color-background: #1F1F1F;
-    --color-primary: #00FF73;
+    --color-background: #1f1f1f;
+    --color-primary: #00ff73;
 
-    --color-heading: #FFFFFF;
-    --color-default: #FFFFFF;
-    --color-muted: #A6A6A6;
+    --color-heading: #ffffff;
+    --color-default: #ffffff;
+    --color-muted: #a6a6a6;
     --color-disabled: #989898;
 
     --color-weak-card: #323232;
     --color-border: #545454;
 
-    --color-btn-primary-background: #00FF73;
+    --color-btn-primary-background: #00ff73;
     --color-btn-primary-display: #000000;
-    --color-btn-background: #FFFFFF;
+    --color-btn-background: #ffffff;
     --color-btn-background-display: #000000;
   }
+}
+
+:root {
+  font-size: 16px;
 }
 
 body {
   @apply bg-background text-default font-inter min-h-screen relative;
 
   position: relative;
-  
+
   &::before {
     @apply absolute block pointer-events-none w-full h-full top-0 left-0 opacity-[0.05] dark:opacity-[0.025];
 
-    content: '';
+    content: "";
     z-index: -1;
 
     background-image: url(../../public/texture-overlay.jpg);
