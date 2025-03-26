@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getLocaleFromCookies } from "@/lib/i18n/utils"
 
 import type { Metadata } from "next"
-import { inter } from "@/constants/font"
+import { fira_mono, inter } from "@/constants/font"
 
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
@@ -27,7 +27,7 @@ export default async function RootLayout({
 
   return (
     <html suppressHydrationWarning lang={locale}>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} ${fira_mono.variable} antialiased`}>
         <ThemeProvider defaultTheme="dark" attribute="class">
           <NextIntlClientProvider {...rest} />
         </ThemeProvider>

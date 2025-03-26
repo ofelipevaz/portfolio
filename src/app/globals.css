@@ -8,6 +8,7 @@
 
 @theme inline {
   --font-inter: var(--font-inter);
+  --font-fira: var(--font-fira);
 }
 
 @theme {
