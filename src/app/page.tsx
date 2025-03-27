@@ -1,3 +1,4 @@
+import { Button } from "@/components/@ui/button"
 import { Text } from "@/components/@ui/text"
 
 export default function Home() {
@@ -13,6 +14,35 @@ export default function Home() {
         magni explicabo at asperiores quis fugiat enim mollitia animi quae,
         quisquam aliquam nulla earum neque ex error tempora ab cumque suscipit.
       </Text>
+
+      <div className="m-10">
+        <Button variants={{ background: "primary" }}>Submit</Button>
+      </div>
+      <div className="m-10">
+        <Button variants={{ background: "contrast" }}>Submit</Button>
+      </div>
+      <div className="m-10">
+        <Button variants={{ style: "outlined", background: "primary" }}>
+          Submit
+        </Button>
+      </div>
+      <div className="m-10">
+        <Button variants={{ style: "outlined", background: "contrast" }}>
+          Submit
+        </Button>
+      </div>
+      <div className="m-10">
+        <Button
+          variants={{
+            style: "outlined",
+            width: "full",
+            size: "md",
+            background: "contrast",
+          }}
+        >
+          Submit
+        </Button>
+      </div>
     </div>
   )
 }

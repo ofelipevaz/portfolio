@@ -27,8 +27,8 @@
 
   --color-btn-primary-background: #242424;
   --color-btn-primary-display: #ffffff;
-  --color-btn-background: #0e0e0e;
-  --color-btn-background-display: #ffffff;
+  --color-btn-contrast-background: #0e0e0e;
+  --color-btn-contrast-display: #ffffff;
 }
 
 @layer theme {
@@ -48,8 +48,8 @@
 
     --color-btn-primary-background: #00ff73;
     --color-btn-primary-display: #000000;
-    --color-btn-background: #ffffff;
-    --color-btn-background-display: #000000;
+    --color-btn-contrast-background: #ffffff;
+    --color-btn-contrast-display: #000000;
   }
 }
 
