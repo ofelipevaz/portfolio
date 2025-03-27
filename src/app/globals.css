@@ -5,6 +5,8 @@
 @theme inline {
   --font-inter: var(--font-inter);
   --font-fira: var(--font-fira);
+
+  --color-error: var(--color-red-500);
 }
 
 @theme {
@@ -20,6 +22,8 @@
   --color-border: #dbdbdb;
 
   --color-terminal-background: #171717;
+
+  --color-quote-border: #e6e6e6;
 
   --color-btn-primary-background: #242424;
   --color-btn-primary-display: #ffffff;
@@ -40,15 +44,13 @@
     --color-weak-card: #323232;
     --color-border: #545454;
 
+    --color-quote-border: #303030;
+
     --color-btn-primary-background: #00ff73;
     --color-btn-primary-display: #000000;
     --color-btn-background: #ffffff;
     --color-btn-background-display: #000000;
   }
-}
-
-:root {
-  font-size: 16px;
 }
 
 body {
