@@ -34,12 +34,6 @@
 
 @layer theme {
   @variant dark {
-    --color-teste: red;
-  }
-}
-
-@layer theme {
-  @variant dark {
     --color-background: #1f1f1f;
     --color-primary: #00ff73;
 
