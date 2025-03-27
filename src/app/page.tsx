@@ -1,6 +1,6 @@
-import { Button } from "@/components/@ui/button"
-import { Text } from "@/components/@ui/text"
-import { Badge } from "@/components/@ui/badge"
+import { Button } from "@/ui/button"
+import { Text } from "@/ui/text"
+import { Badge } from "@/ui/badge"
 
 export default function Home() {
   return (
