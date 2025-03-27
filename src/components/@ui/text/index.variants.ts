@@ -20,6 +20,8 @@ export const buildTextVariants = cva([], {
       extrabold: "font-extrabold",
     },
     color: {
+      default: "text-default",
+      heading: "text-heading",
       primary: "text-primary",
       error: "text-error",
       disabled: "text-disabled",
@@ -93,6 +95,9 @@ export const buildTextVariants = cva([], {
       className: "underline underline-offset-2",
     },
   ],
+  defaultVariants: {
+    color: "default",
+  },
 })
 
 export type TextVariants = VariantProps<typeof buildTextVariants>
