@@ -3,13 +3,11 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-inter: var(--font-inter);
-  --font-fira: var(--font-fira);
-
   --color-error: var(--color-red-500);
 }
 
 @theme {
+  --color-badge-display: #fbfbfb;
   --color-background: #fbfbfb;
   --color-primary: #2bc570;
 
@@ -17,6 +15,9 @@
   --color-default: #424242;
   --color-muted: #848484;
   --color-disabled: #989898;
+
+  --color-badge-background: #e1e1e1;
+  --color-badge-display: #686868;
 
   --color-weak-card: #eeeeee;
   --color-border: #dbdbdb;
@@ -33,6 +34,12 @@
 
 @layer theme {
   @variant dark {
+    --color-teste: red;
+  }
+}
+
+@layer theme {
+  @variant dark {
     --color-background: #1f1f1f;
     --color-primary: #00ff73;
 
@@ -40,6 +47,9 @@
     --color-default: #ffffff;
     --color-muted: #a6a6a6;
     --color-disabled: #989898;
+
+    --color-badge-background: #323232;
+    --color-badge-display: #ffffff;
 
     --color-weak-card: #323232;
     --color-border: #545454;
@@ -53,13 +63,22 @@
   }
 }
 
-body {
-  @apply bg-background text-default font-inter min-h-screen relative;
-
+html {
+  min-height: 100vh;
   position: relative;
 
   &::before {
-    @apply absolute block pointer-events-none w-full h-full top-0 left-0 opacity-[0.05] dark:opacity-[0.025];
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.05;
+
+    display: block;
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
 
     content: "";
     z-index: -1;
@@ -69,4 +88,14 @@ body {
     background-size: cover;
     background-repeat: repeat;
   }
+
+  &.dark::before {
+    opacity: 0.025;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-default);
+  font-family: var(--font-inter);
 }
