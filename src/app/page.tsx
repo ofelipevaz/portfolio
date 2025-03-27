@@ -1,5 +1,6 @@
 import { Button } from "@/components/@ui/button"
 import { Text } from "@/components/@ui/text"
+import { Badge } from "@/components/@ui/badge"
 
 export default function Home() {
   return (
@@ -42,6 +43,10 @@ export default function Home() {
         >
           Submit
         </Button>
+      </div>
+
+      <div className="mt-4">
+        <Badge>Portfolio</Badge>
       </div>
     </div>
   )

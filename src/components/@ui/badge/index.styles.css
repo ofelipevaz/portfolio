@@ -1,0 +1,9 @@
+@import "../../../app/globals.css";
+
+.badge {
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2.5);
+  border-radius: calc(var(--spacing) * 125);
+  font-size: var(--text-xs);
+  background: var(--color-badge-background);
+  color: var(--color-badge-display);
+}
