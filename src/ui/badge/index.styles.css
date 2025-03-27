@@ -1,4 +1,4 @@
-@import "../../../app/globals.css";
+@import "../../app/globals.css";
 
 .badge {
   padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2.5);
