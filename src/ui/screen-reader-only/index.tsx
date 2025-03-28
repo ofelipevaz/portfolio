@@ -1,7 +1,6 @@
 import { Slot } from "@radix-ui/react-slot"
 import { ComponentProps, ReactNode } from "react"
 
-import "./index.styles.scss"
 import { cn } from "@/lib/utils"
 
 interface ScreenReaderOnlyProps extends ComponentProps<"span"> {
