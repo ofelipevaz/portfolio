@@ -6,7 +6,7 @@ import "./index.styles.css"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 
-export function Logotype() {
+export function HeaderLogotype() {
   const imageAlts = useTranslations("ImageAlts")
 
   return (
