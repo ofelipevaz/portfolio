@@ -5,10 +5,10 @@ import { getLocaleFromCookies } from "@/lib/i18n/utils"
 import type { Metadata } from "next"
 import { fira_mono, inter } from "@/constants/font"
 
-import "./globals.css"
-import { ThemeProvider } from "next-themes"
-import { ToastProvider } from "../store/ToastContext"
 import { cn } from "../lib/utils"
+import { Providers } from "../components/providers"
+
+import "./globals.css"
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocaleFromCookies()
@@ -30,11 +30,9 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang={locale}>
       <body className={cn(inter.variable, fira_mono.variable, "antialiased")}>
-        <ThemeProvider defaultTheme="dark" attribute="class">
-          <ToastProvider>
-            <NextIntlClientProvider {...rest} />
-          </ToastProvider>
-        </ThemeProvider>
+        <Providers>
+          <NextIntlClientProvider {...rest} />
+        </Providers>
       </body>
     </html>
   )
