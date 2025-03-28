@@ -10,10 +10,10 @@ import { LuCheck, LuChevronDown, LuGlobe } from "react-icons/lu"
 import { ScreenViewOnly } from "@/ui/screen-view-only"
 import { CountryFlag } from "@/ui/country-flag"
 import { useRouter } from "next/navigation"
-import { useEffect } from "react"
 import { useToast } from "~/src/hooks/useToast"
 
 import "./index.styles.css"
+import { useEffectAfterMount } from "~/src/hooks/useMountEffect"
 
 function PopoverRadioItemIndicator() {
   return (
@@ -33,15 +33,15 @@ export function HeaderLanguageSwitcher() {
   const router = useRouter()
   const toast = useToast()
 
-  useEffect(() => {
+  useEffectAfterMount(() => {
     closePopover()
+
     toast.notify({
       title: t("toasts.languageChanged.title"),
       description: t("toasts.languageChanged.description", {
         language: t("display"),
       }),
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locale])
 
   function handleLanguageSelect(value: string | null) {
