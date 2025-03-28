@@ -26,6 +26,7 @@
       "title": "Creativity & Purpose.",
       "subtitle": "Exploring out-of-the-box challenges with effective and technical solutions.",
       "githubButtonLabel": "Access my GitHub",
+      "changeThemeButtonLabel": "Toggle theme",
 
       "terminal": {
         "display": "Terminal",

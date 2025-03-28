@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "../../../app/globals.css";
+
+.side-buttons {
+  gap: calc(var(--spacing) * 1.5);
+  display: flex;
+  align-items: center;
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 1);
+
+    .github-button {
+      @apply p-1;
+    }
+
+    .change-theme-button {
+      @apply p-1;
+
+      cursor: pointer;
+    }
+  }
+
+  .separator {
+    @apply h-5;
+  }
+}
