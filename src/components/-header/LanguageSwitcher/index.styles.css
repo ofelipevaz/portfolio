@@ -36,6 +36,7 @@
 .language-switcher-container {
   padding-top: calc(var(--spacing) * 2.75);
   font-size: var(--text-xs);
+  background: var(--color-background);
 
   .language-switcher-content {
     box-shadow: var(--shadow-xs);
