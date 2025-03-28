@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 export function HeaderLogotype() {
-  const imageAlts = useTranslations("ImageAlts")
+  const imageAlts = useTranslations("image-alts")
 
   return (
     <Link href="/" className="logotype">
