@@ -10,11 +10,19 @@
     "role": "Desenvolvedor Front-End"
   },
 
+  "ImageAlts": {
+    "selfLogotype": "Logotipo de Felipe Vaz"
+  },
+
   "sections": {
     "Header": {
       "title": "Criatividade & Propósito.",
       "subtitle": "Explorando desafios fora da caixinha, com soluções eficazes e técnicas.",
       "githubButtonLabel": "Acessar meu GitHub",
+
+      "acessibility": {
+        "changeLanguage": "Mudar idioma para {language}"
+      },
 
       "terminal": {
         "display": "Terminal",

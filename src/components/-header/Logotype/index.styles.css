@@ -1,0 +1,30 @@
+@import "../../../app/globals.css";
+
+.logotype {
+  @apply select-none;
+  position: relative;
+  display: inline-block;
+
+  .logotype-image {
+    @apply select-none;
+    @apply invert-[80%] dark:invert-0;
+  }
+
+  .logotype-display {
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.75;
+    position: absolute;
+    text-transform: lowercase;
+
+    bottom: calc(var(--spacing) * -2);
+    right: calc(var(--spacing) * -5);
+
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+
+    ::before {
+      content: ".";
+      letter-spacing: -1.5;
+    }
+  }
+}
