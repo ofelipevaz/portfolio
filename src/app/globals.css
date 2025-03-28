@@ -19,7 +19,7 @@
   --color-badge-background: #e1e1e1;
   --color-badge-display: #686868;
 
-  --color-weak-card: #eeeeee;
+  --color-weak-card-background: #e6e6e6;
   --color-border: #dbdbdb;
 
   --color-terminal-background: #171717;
@@ -45,7 +45,7 @@
     --color-badge-background: #323232;
     --color-badge-display: #ffffff;
 
-    --color-weak-card: #323232;
+    --color-weak-card-background: #262626;
     --color-border: #545454;
 
     --color-quote-border: #303030;
