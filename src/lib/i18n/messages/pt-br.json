@@ -14,15 +14,18 @@
     "selfLogotype": "Logotipo de Felipe Vaz"
   },
 
+  "toasts": {
+    "languageChanged": {
+      "title": "Sucesso",
+      "description": "Idioma alterado para {language}"
+    }
+  },
+
   "sections": {
     "Header": {
       "title": "Criatividade & Propósito.",
       "subtitle": "Explorando desafios fora da caixinha, com soluções eficazes e técnicas.",
       "githubButtonLabel": "Acessar meu GitHub",
-
-      "acessibility": {
-        "changeLanguage": "Mudar idioma para {language}"
-      },
 
       "terminal": {
         "display": "Terminal",

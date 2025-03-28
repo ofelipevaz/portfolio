@@ -14,6 +14,13 @@
     "selfLogotype": "Felipe Vaz's branding"
   },
 
+  "toasts": {
+    "languageChanged": {
+      "title": "Success",
+      "description": "Language changed to {language}"
+    }
+  },
+
   "sections": {
     "Header": {
       "title": "Creativity & Purpose.",

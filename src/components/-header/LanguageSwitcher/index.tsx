@@ -7,11 +7,13 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { LuCheck, LuChevronDown, LuGlobe } from "react-icons/lu"
 
-import "./index.styles.css"
 import { ScreenViewOnly } from "@/ui/screen-view-only"
 import { CountryFlag } from "@/ui/country-flag"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
+import { useToast } from "~/src/hooks/useToast"
+
+import "./index.styles.css"
 
 function PopoverRadioItemIndicator() {
   return (
@@ -29,9 +31,16 @@ export function HeaderLanguageSwitcher() {
   const t = useTranslations()
   const locale = useLocale()
   const router = useRouter()
+  const toast = useToast()
 
   useEffect(() => {
     closePopover()
+    toast.notify({
+      title: t("toasts.languageChanged.title"),
+      description: t("toasts.languageChanged.description", {
+        language: t("display"),
+      }),
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locale])
 
