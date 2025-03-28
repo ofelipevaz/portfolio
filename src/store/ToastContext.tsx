@@ -23,10 +23,7 @@ export const useToastContext = () => {
 }
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
-  const [toast, setToast] = useState<ToastType | null>({
-    description: "teste",
-    title: "teste",
-  })
+  const [toast, setToast] = useState<ToastType | null>(null)
 
   return (
     <ToastContext.Provider value={{ toast, setToast }}>
@@ -35,8 +32,6 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
         {toast && (
           <Toast
             rootProps={{
-              defaultOpen: true,
-              duration: 500000,
               onOpenChange: () => {
                 setToast(null)
               },
