@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation"
 import { useToast } from "~/src/hooks/useToast"
 
 import "./index.styles.css"
-import { useEffectAfterMount } from "~/src/hooks/useMountEffect"
+import { useEffectAfterMount } from "~/src/hooks/useEffectAfterMount"
 
 function PopoverRadioItemIndicator() {
   return (
