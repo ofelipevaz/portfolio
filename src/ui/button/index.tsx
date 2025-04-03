@@ -16,5 +16,5 @@ export function Button({
   const Element = asChild ? Slot : "button"
   const variantsClasses = buildButtonVariants(variants)
 
-  return <Element {...props} className={cn(props.className, variantsClasses)} />
+  return <Element {...props} className={cn(variantsClasses, props.className)} />
 }
