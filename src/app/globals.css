@@ -17,6 +17,9 @@
   --color-muted: #848484;
   --color-disabled: #989898;
 
+  --width-skeleton: min(58rem, 95vw);
+  --padding-skeleton: 0 0.15rem;
+
   --color-badge-background: #e1e1e1;
   --color-badge-display: #686868;
 
