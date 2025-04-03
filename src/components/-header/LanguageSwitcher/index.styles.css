@@ -21,7 +21,7 @@
     display: inline-block;
 
     &.globe-icon {
-      font-size: var(--text-sm);
+      font-size: var(--text-base);
       padding-bottom: 0.125rem;
     }
 
