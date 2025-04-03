@@ -15,7 +15,7 @@ export const buildButtonVariants = cva(["button cursor-pointer py-1 px-2.5"], {
       sm: "rounded-sm",
       md: "rounded-md",
       lg: "rounded-lg",
-      ful: "rounded-full",
+      full: "rounded-full",
     },
     size: {
       sm: "text-xs",
