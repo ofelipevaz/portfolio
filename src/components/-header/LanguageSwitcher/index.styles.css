@@ -1,6 +1,6 @@
 @import "../../../app/globals.css";
 
-.language-switcher {
+.header-language-switcher {
   width: fit-content;
   font-size: var(--text-xs);
 
@@ -33,7 +33,7 @@
   }
 }
 
-.language-switcher-container {
+.header-language-switcher-container {
   padding-top: calc(var(--spacing) * 2.75);
   font-size: var(--text-xs);
 

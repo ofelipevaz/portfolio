@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "../../../app/globals.css";
 
-.side-buttons {
+.header-side-buttons {
   gap: calc(var(--spacing) * 1.5);
   display: flex;
   align-items: center;

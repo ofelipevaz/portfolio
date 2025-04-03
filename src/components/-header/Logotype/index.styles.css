@@ -1,6 +1,6 @@
 @import "../../../app/globals.css";
 
-.logotype {
+.header-logotype {
   @apply select-none;
   position: relative;
   display: inline-block;

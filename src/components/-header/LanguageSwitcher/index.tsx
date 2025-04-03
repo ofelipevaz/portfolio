@@ -50,7 +50,7 @@ export function HeaderLanguageSwitcher() {
   }
 
   return (
-    <div className="language-switcher">
+    <div className="header-language-switcher">
       <Popover.Root open={open}>
         <Popover.Trigger
           onClick={onClick}
@@ -67,7 +67,7 @@ export function HeaderLanguageSwitcher() {
         </Popover.Trigger>
         <Popover.Portal>
           <Popover.Content
-            className="language-switcher-container"
+            className="header-language-switcher-container"
             align="end"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}

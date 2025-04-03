@@ -10,7 +10,7 @@ export function HeaderLogotype() {
   const imageAlts = useTranslations("image-alts")
 
   return (
-    <Link href="/" className="logotype">
+    <Link href="/" className="header-logotype">
       <Image
         className="logotype-image"
         src={LogotypeImage.src}

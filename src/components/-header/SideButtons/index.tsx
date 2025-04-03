@@ -20,7 +20,7 @@ export function HeaderSideButtons() {
   }
 
   return (
-    <div className="side-buttons">
+    <div className="header-side-buttons">
       <div className="buttons">
         <button
           onClick={handleChangeThemeClick}
