@@ -11,9 +11,11 @@ import { FaGithub } from "react-icons/fa"
 import { LuSunMedium, LuSunMoon } from "react-icons/lu"
 
 import "./index.styles.css"
+import { useTranslations } from "next-intl"
 
 export function HeaderSideButtons() {
   const { theme, setTheme } = useTheme()
+  const t = useTranslations("sections.Header")
 
   function handleChangeThemeClick() {
     setTheme(theme == "dark" ? "light" : "dark")
@@ -26,7 +28,7 @@ export function HeaderSideButtons() {
           onClick={handleChangeThemeClick}
           className="change-theme-button"
         >
-          <ScreenReaderOnly>Mudar tema</ScreenReaderOnly>
+          <ScreenReaderOnly>{t("changeThemeButtonLabel")}</ScreenReaderOnly>
           {theme == "dark" ? <LuSunMedium /> : <LuSunMoon />}
         </button>
         <Link
