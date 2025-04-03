@@ -1,0 +1,9 @@
+.header {
+  padding: calc(var(--spacing) * 4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: calc(var(--spacing) * 4);
+  column-gap: calc(var(--spacing) * 10);
+}
