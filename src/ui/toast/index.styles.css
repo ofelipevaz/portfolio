@@ -31,8 +31,9 @@
   }
 
   .toast-icon {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     padding: calc(var(--spacing) * 0.5);
+    transform: translateY(-0.1rem);
   }
 
   .toast-content {
@@ -42,7 +43,7 @@
 
     .toast-title {
       font-weight: var(--font-weight-medium);
-      font-size: var(--text-sm);
+      font-size: var(--text-xs);
     }
 
     .toast-description {
