@@ -18,6 +18,10 @@
     "languageChanged": {
       "title": "Success",
       "description": "Language changed to {language}"
+    },
+    "themeChanged": {
+      "title": "Success",
+      "description": "Theme changed to {theme}"
     }
   },
 
@@ -27,6 +31,10 @@
       "subtitle": "Exploring out-of-the-box challenges with effective and technical solutions.",
       "githubButtonLabel": "Access my GitHub",
       "changeThemeButtonLabel": "Toggle theme",
+      "themes": {
+        "light": "light",
+        "dark": "dark"
+      },
 
       "terminal": {
         "display": "Terminal",
