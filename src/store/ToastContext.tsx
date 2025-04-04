@@ -26,9 +26,8 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toast, setToast] = useState<ToastType | null>(null)
 
   return (
-    <ToastContext.Provider value={{ toast, setToast }}>
-      {children}
-      <RxToast.Provider swipeDirection="right">
+    <RxToast.Provider swipeDirection="right">
+      <ToastContext.Provider value={{ toast, setToast }}>
         {toast && (
           <Toast
             rootProps={{
@@ -39,8 +38,9 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
             options={{ ...toast }}
           />
         )}
-        <RxToast.Viewport tabIndex={0} className="toast-viewport" />
-      </RxToast.Provider>
-    </ToastContext.Provider>
+        {children}
+      </ToastContext.Provider>
+      <RxToast.Viewport tabIndex={0} className="toast-viewport" />
+    </RxToast.Provider>
   )
 }

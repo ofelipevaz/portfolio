@@ -60,3 +60,7 @@
     height: fit-content;
   }
 }
+
+.toast-viewport {
+  position: fixed;
+}
