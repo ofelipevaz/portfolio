@@ -1,0 +1,28 @@
+@import "../../app/globals.css";
+
+.section {
+  .section-title {
+    position: relative;
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-heading);
+    width: fit-content;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: calc(var(--spacing) * -1.25);
+      left: 0;
+
+      display: block;
+      width: 85%;
+      height: 1px;
+      background: var(--color-primary);
+    }
+  }
+
+  .section-content {
+    margin-top: calc(var(--spacing) * 6);
+  }
+}
