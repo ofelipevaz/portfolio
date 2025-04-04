@@ -3,7 +3,7 @@
 
   "Metadata": {
     "title": "Felipe Vaz - Portfolio | Front-End Developer",
-    "description": "Hi, I'm Felipe Vaz! Front-End Developer passionate about creating creative and high-performance interfaces."
+    "description": "Hi, I'm Felipe Vaz! A Front-End Developer passionate about creating creative and high-performance interfaces."
   },
 
   "Profile": {
@@ -11,7 +11,7 @@
   },
 
   "image-alts": {
-    "selfLogotype": "Felipe Vaz's branding"
+    "selfLogotype": "Felipe Vaz's Logotype"
   },
 
   "toasts": {
@@ -21,16 +21,16 @@
     },
     "themeChanged": {
       "title": "Success",
-      "description": "Theme changed to {theme}"
+      "description": "View mode changed to {theme} mode"
     }
   },
 
   "sections": {
     "Header": {
       "title": "Creativity & Purpose.",
-      "subtitle": "Exploring out-of-the-box challenges with effective and technical solutions.",
-      "githubButtonLabel": "Access my GitHub",
-      "changeThemeButtonLabel": "Toggle theme",
+      "subtitle": "Exploring outside-the-box challenges with effective and technical solutions.",
+      "githubButtonLabel": "Visit my GitHub",
+      "changeThemeButtonLabel": "Change theme",
       "themes": {
         "light": "light",
         "dark": "dark"
@@ -40,7 +40,7 @@
         "display": "Terminal",
         "lines": {
           "1st": "Welcome to my portfolio",
-          "2nd": "Use ↑ ↓ to navigate and 'Enter' to select a command."
+          "2nd": "Use ↑ ↓ to navigate and “Enter” to select a command."
         },
         "options": {
           "1st": "About me",
@@ -52,7 +52,7 @@
     },
     "About": {
       "display": "About me",
-      "content": "Fascinated by Web Development, I love transforming ideas into interactive and functional interfaces. Since I started programming, I strive to create solutions that break the conventional, always exploring new ways to combine creativity and technology.\nMy name is Felipe, I’m 20 years old, and I'm looking for my first job experience. I believe programming is much more than code — it’s a tool to innovate, solve problems, and impact people."
+      "content": "<p>Fascinated by Web Development, I love turning ideas into interactive and functional interfaces. Since I started programming, I've been aiming to create solutions that <bold>break the mold</bold>, always exploring new ways to combine <bold>creativity and technology</bold>.</p><p>My name is Felipe, I'm 20 years old and I'm looking for my first experience in the job market. I believe programming goes far beyond code — it's a tool to <bold>innovate, solve problems, and impact people</bold>.</p>"
     },
     "Technologies": {
       "display": "Technologies"

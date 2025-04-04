@@ -3,9 +3,6 @@
 .section {
   .section-title {
     position: relative;
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-heading);
     width: fit-content;
 
     &::after {

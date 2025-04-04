@@ -1,0 +1,44 @@
+@import "../../../app/globals.css";
+
+.section-about {
+  max-width: 40.25rem;
+
+  /* hyphens: auto; */
+  .section-about-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: calc(var(--spacing) * 4.25);
+    margin-left: calc(var(--spacing) * 1.25);
+
+    .section-about-content {
+      @apply space-y-4;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      display: block;
+      height: 90%;
+      width: 2px;
+      background: var(--color-quote-border);
+    }
+  }
+
+  .section-about-user {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 3.25);
+
+    .section-about-user-role {
+      display: block;
+      transform: translateY(-2px);
+    }
+
+    .section-about-user-image {
+      box-shadow: var(--shadow-lg);
+      border-radius: 50%;
+    }
+  }
+}
