@@ -1,30 +1,23 @@
 "use client"
 
-import { ThemeProvider } from "next-themes"
 import { ReactNode } from "react"
 import { ToastProvider } from "../store/ToastContext"
-import { useMount } from "../hooks/useMount"
+import dynamic from "next/dynamic"
 
+const NextThemesProvider = dynamic(
+  () => import("next-themes").then((e) => e.ThemeProvider),
+  {
+    ssr: false,
+  }
+)
 type ProvidersType = {
   children: ReactNode
 }
 
 export function Providers({ children }: ProvidersType) {
-  const { isMounted } = useMount()
-
-  const _ThemeProvider = ({ children }: ProvidersType) => {
-    return isMounted ? (
-      <ThemeProvider defaultTheme="dark" attribute="class">
-        {children}
-      </ThemeProvider>
-    ) : (
-      children
-    )
-  }
-
   return (
-    <_ThemeProvider>
+    <NextThemesProvider defaultTheme="system" enableSystem attribute="class">
       <ToastProvider>{children}</ToastProvider>
-    </_ThemeProvider>
+    </NextThemesProvider>
   )
 }
