@@ -119,4 +119,8 @@ body {
   background: var(--color-background);
   color: var(--color-default);
   font-family: var(--font-inter);
+
+  @variant not-md {
+    overflow-y: auto !important;
+  }
 }

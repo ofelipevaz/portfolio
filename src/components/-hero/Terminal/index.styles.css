@@ -1,0 +1,122 @@
+@import "../../../app/globals.css";
+
+.hero-terminal {
+  @apply border border-border;
+  color: var(--color-white);
+  font-family: var(--font-fira);
+
+  box-shadow: var(--shadow-lg);
+  flex-grow: 1;
+  height: 22.5rem;
+  background: var(--color-terminal-background);
+  border-radius: var(--radius-md);
+
+  .cursor {
+    display: block;
+    transform: translateX(2px);
+    margin-top: var(--spacing);
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 18px;
+      display: inline-block;
+      animation: cursor-blink 1s steps(2) infinite;
+      background: white;
+    }
+  }
+
+  @variant not-md {
+    display: none;
+  }
+
+  animation: var(--animate-fade-in-bottom-up);
+  cursor: text;
+
+  .hero-terminal-buttons {
+    @apply px-4 pt-4 cursor-pointer;
+    display: flex;
+    gap: 0.35rem;
+    margin-bottom: calc(var(--spacing) * 4);
+
+    > div {
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+    }
+    .close {
+      background: var(--color-red-400);
+    }
+    .minimize {
+      background: var(--color-yellow-300);
+    }
+    .maximize {
+      background: var(--color-green-500);
+    }
+  }
+
+  .hero-terminal-content {
+    @apply px-4 pb-4;
+
+    .hero-terminal-command {
+      margin-bottom: calc(var(--spacing) * 4.75);
+
+      .highlight {
+        color: var(--color-orange-300);
+      }
+    }
+
+    .hero-terminal-icon {
+      display: inline-block;
+      color: var(--color-orange-300);
+      padding-bottom: var(--spacing);
+      transform: translateX(calc(var(--spacing) * -0.5));
+    }
+
+    width: 100%;
+    .hero-terminal-options {
+      margin-top: calc(var(--spacing) * 4.75);
+      .hero-terminal-option {
+        &[data-selected="true"] {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.hero-terminal-float-back-button {
+  cursor: pointer;
+  color: var(--color-white);
+  border: solid 1px var(--color-white);
+
+  position: fixed;
+  bottom: calc(var(--spacing) * 3.75);
+  left: 0;
+  transform: translate(calc(50vw - 50%));
+
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 6);
+  font-family: var(--font-fira);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-4xl);
+  background: var(--color-terminal-background);
+
+  .hero-terminal-arrow-up-icon {
+    animation: var(--animate-bounce);
+    cursor: pointer;
+    animation-duration: 1s;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: calc(var(--spacing) * 1.25);
+  }
+
+  @variant not-md {
+    display: none;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
