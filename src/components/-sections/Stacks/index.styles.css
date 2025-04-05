@@ -1,0 +1,28 @@
+@import "../../../app/globals.css";
+
+.section-stacks {
+  .section-stacks-list {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+    .section-stacks-list-item {
+      @apply hover:bg-zinc-100 dark:hover:bg-zinc-800;
+
+      box-shadow: var(--shadow-xs);
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 2);
+      border: solid 1px var(--color-border);
+      padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+      border-radius: var(--radius-md);
+
+      .section-stacks-list-item-icon {
+        @apply text-xl;
+      }
+      .section-stacks-list-item-display {
+        font-size: var(--text-sm);
+      }
+    }
+  }
+}

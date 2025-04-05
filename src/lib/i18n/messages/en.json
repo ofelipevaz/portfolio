@@ -54,8 +54,8 @@
       "display": "About me",
       "content": "<p>Fascinated by Web Development, I love turning ideas into interactive and functional interfaces. Since I started programming, I've been aiming to create solutions that <bold>break the mold</bold>, always exploring new ways to combine <bold>creativity and technology</bold>.</p><p>My name is Felipe, I'm 20 years old and I'm looking for my first experience in the job market. I believe programming goes far beyond code — it's a tool to <bold>innovate, solve problems, and impact people</bold>.</p>"
     },
-    "Technologies": {
-      "display": "Technologies"
+    "Stack": {
+      "display": "Stack"
     },
     "Projects": {
       "display": "Projects",
