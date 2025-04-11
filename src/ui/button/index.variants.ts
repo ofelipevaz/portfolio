@@ -23,6 +23,7 @@ export const buildButtonVariants = cva(["button cursor-pointer py-1 px-2.5"], {
       lg: "text-base",
     },
     background: {
+      transparent: "bg-transparent text-default",
       primary:
         "bg-btn-primary-background hover:bg-btn-primary-background/90 text-btn-primary-display",
       contrast:
@@ -34,6 +35,11 @@ export const buildButtonVariants = cva(["button cursor-pointer py-1 px-2.5"], {
     },
   },
   compoundVariants: [
+    {
+      background: "primary",
+      style: "solid",
+      className: "bg-primary hover:bg-primary/90 dark:text-dark",
+    },
     {
       background: "primary",
       style: "outlined",

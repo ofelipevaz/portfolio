@@ -1,5 +1,5 @@
 import { ComponentProps } from "react"
-import { Option } from "../-hero/Terminal/index.hooks"
+import { Option } from "../../../-hero/Terminal/index.hooks"
 import { cn } from "~/src/lib/utils"
 
 import "./index.styles.css"

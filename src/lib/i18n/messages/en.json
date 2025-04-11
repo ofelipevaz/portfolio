@@ -3,7 +3,7 @@
 
   "Metadata": {
     "title": "Felipe Vaz - Portfolio | Front-End Developer",
-    "description": "Hi, I'm Felipe Vaz! A Front-End Developer passionate about creating creative and high-performance interfaces."
+    "description": "Hi, I'm Felipe Vaz! A Front-End Developer passionate about crafting creative and high-performance interfaces."
   },
 
   "Profile": {
@@ -11,7 +11,7 @@
   },
 
   "image-alts": {
-    "selfLogotype": "Felipe Vaz's Logotype"
+    "selfLogotype": "Felipe Vaz's logotype"
   },
 
   "toasts": {
@@ -28,7 +28,7 @@
   "sections": {
     "Header": {
       "title": "Creativity & Purpose.",
-      "subtitle": "Exploring outside-the-box challenges with effective and technical solutions.",
+      "subtitle": "Exploring out-of-the-box challenges with effective and technical solutions.",
       "githubButtonLabel": "Visit my GitHub",
       "changeThemeButtonLabel": "Change theme",
       "themes": {
@@ -52,15 +52,25 @@
     },
     "About": {
       "display": "About me",
-      "content": "<p>Fascinated by Web Development, I love turning ideas into interactive and functional interfaces. Since I started programming, I've been aiming to create solutions that <bold>break the mold</bold>, always exploring new ways to combine <bold>creativity and technology</bold>.</p><p>My name is Felipe, I'm 20 years old and I'm looking for my first experience in the job market. I believe programming goes far beyond code — it's a tool to <bold>innovate, solve problems, and impact people</bold>.</p>"
+      "content": "<p>Fascinated by Web Development, I love turning ideas into interactive and functional interfaces. Since I started programming, I’ve been striving to create solutions that <bold>break the mold</bold>, always exploring new ways to combine <bold>creativity and technology</bold>.</p><p>My name is Felipe, I'm 20 years old and I'm looking for my first opportunity in the job market. I believe programming goes far beyond code — it’s a tool to <bold>innovate, solve problems, and impact people</bold>.</p>"
     },
     "Stack": {
-      "display": "Stack"
+      "display": "Technologies"
     },
     "Projects": {
       "display": "Projects",
-      "viewButtonLabel": "View",
-      "repositoryButtonLabel": "GitHub Repository"
+      "viewButtonLabel": "See more",
+      "repositoryButtonLabel": "GitHub Repository",
+      "acessibility": {
+        "tags-display": "List of categories for this project"
+      },
+
+      "collection": {
+        "portfolio": {
+          "name": "Portfolio",
+          "description": "A simple, creative, and modern portfolio, designed to elegantly and objectively showcase projects. Built with cutting-edge technologies to provide a smooth, responsive, and visually striking experience."
+        }
+      }
     }
   }
 }

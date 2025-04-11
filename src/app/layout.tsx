@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server"
 import { NextIntlClientProvider } from "next-intl"
-import { getLocaleFromCookies } from "@/lib/i18n/utils"
+import { getLocaleFromCookies } from "~/src/lib/i18n/utils"
 
 import type { Metadata } from "next"
 import { fira_mono, inter } from "@/constants/font"

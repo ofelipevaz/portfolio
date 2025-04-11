@@ -1,0 +1,14 @@
+@import "../../../app/globals.css";
+
+.section-projects {
+  .section-projects-collection {
+    display: grid;
+    gap: calc(var(--spacing) * 4);
+
+    grid-template-columns: repeat(2, 1fr);
+
+    @variant not-sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

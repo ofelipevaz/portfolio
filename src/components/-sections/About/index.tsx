@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { Section } from "../../Section"
+import { Section } from "../+partials/Section"
 import { useTranslations } from "next-intl"
 
 import { Text } from "~/src/ui/text"

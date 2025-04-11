@@ -111,7 +111,8 @@ html {
   }
 
   &.dark::before {
-    opacity: 0.025;
+    /* opacity: 0.025; */
+    opacity: 0.05;
   }
 }
 

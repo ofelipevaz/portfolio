@@ -3,7 +3,6 @@
 .section-about {
   max-width: 40.25rem;
 
-  /* hyphens: auto; */
   .section-about-container {
     display: flex;
     align-items: center;

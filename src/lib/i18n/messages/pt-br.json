@@ -59,8 +59,18 @@
     },
     "Projects": {
       "display": "Projetos",
-      "viewButtonLabel": "Visualizar",
-      "repositoryButtonLabel": "Repositório GitHub"
+      "viewButtonLabel": "Ver mais",
+      "repositoryButtonLabel": "Repositório do GitHub",
+      "acessibility": {
+        "tags-display": "Lista de categorias deste projeto"
+      },
+
+      "collection": {
+        "portfolio": {
+          "name": "Portifólio",
+          "description": "Um portfólio simples, criativo e moderno, desenvolvido com foco em destacar projetos de forma elegante e objetiva. Utiliza tecnologias de ponta para proporcionar uma experiência fluida, responsiva e visualmente marcante."
+        }
+      }
     }
   }
 }

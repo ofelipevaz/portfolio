@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { Section } from "../../Section"
+import { Section } from "../+partials/Section"
 import { stacks } from "~/src/constants/stacks"
 
 import { Slot } from "@radix-ui/react-slot"
