@@ -11,13 +11,19 @@ import { IoMdArrowUp } from "react-icons/io"
 import { ScreenViewOnly } from "~/src/ui/screen-view-only"
 
 export function HeroTerminal() {
-  const { option, appendOptionRef, canSelectOption, backToTerminal } =
-    useHeroTerminal()
+  const {
+    option,
+    appendOptionRef,
+    terminalContainerRef,
+    canSelectOption,
+    backToTerminal,
+  } = useHeroTerminal()
   const tTerminal = useTranslations("sections.Header.terminal")
 
   return (
     <React.Fragment>
-      <div className="hero-terminal">
+      <div ref={terminalContainerRef} className="hero-terminal" tabIndex={0}>
+        <p>{JSON.stringify(canSelectOption)}</p>
         <div className="hero-terminal-buttons">
           <div className="close"></div>
           <div className="minimize"></div>

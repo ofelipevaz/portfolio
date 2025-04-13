@@ -7,6 +7,7 @@ export function useHeroTerminal() {
   const [option, setOption] = useState<Option>("about")
   const [canSelectOption, setCanSelectOption] = useState<boolean>(true)
   const optionsRef = useRef<HTMLAnchorElement[]>([])
+  const terminalContainerRef = useRef<HTMLDivElement>(null)
   const preventScrollCancel = useRef<boolean>(false)
 
   function appendOptionRef(target: HTMLAnchorElement | null) {
@@ -23,34 +24,23 @@ export function useHeroTerminal() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
-  function onOptionChange(option: Option) {
-    const optionsElements = optionsRef.current
-
-    const optionElement = optionsElements.find(
-      (optionElement) => optionElement.getAttribute("data-option-key") == option
-    )
-
-    optionElement?.focus()
-  }
-
   useEffect(() => {
-    window.scrollTo({ top: 0 })
+    const terminalContainer = terminalContainerRef.current
+    const optionsElements = optionsRef.current
 
     /*
      * Handling option anchor clicking
      */
-    const optionsElements = optionsRef.current
-
-    optionsElements.find(() => true)?.focus() // Get first option and focus on it
 
     function handleOptionClick(e: MouseEvent) {
+      console.log(document.activeElement?.innerText)
       const element = e.target as HTMLAnchorElement
 
       const optionKey = element.getAttribute("data-option-key")
       const selectedOptionKey = optionsElements
         .find(
           (optionElement) =>
-            optionElement.getAttribute("data-selected") == "true"
+            optionElement.getAttribute("data-selected") == "true",
         )
         ?.getAttribute("data-option-key")
 
@@ -61,6 +51,7 @@ export function useHeroTerminal() {
 
       if (optionHref) {
         const sectionElement = document.querySelector(optionHref)
+        // terminalContainer?.blur()
 
         if (sectionElement) {
           preventScrollCancel.current = true
@@ -68,7 +59,12 @@ export function useHeroTerminal() {
             top: sectionElement.getBoundingClientRect().top - 36,
             behavior: "smooth",
           })
-          element.blur()
+          const activeElement = document.activeElement
+
+          if (activeElement instanceof HTMLElement) {
+            activeElement.blur()
+            console.log("YOOOOOOOOOOOOOOOO")
+          }
         }
       }
 
@@ -87,6 +83,8 @@ export function useHeroTerminal() {
   }, [])
 
   useEffect(() => {
+    const terminalContainer = terminalContainerRef.current
+
     /*
      * Handling keyboard events
      */
@@ -108,7 +106,6 @@ export function useHeroTerminal() {
       }
 
       setOption(newOption)
-      onOptionChange(newOption)
     }
 
     function previousOption() {
@@ -123,14 +120,13 @@ export function useHeroTerminal() {
       }
 
       setOption(newOption)
-      onOptionChange(newOption)
     }
 
     function enterOption() {
-      if (window.scrollY != 0) return
       const optionElement = optionsRef.current.find(
-        (target) => target.getAttribute("data-option-key") == option
+        (target) => target.getAttribute("data-option-key") == option,
       )
+
       if (optionElement) {
         optionElement.click()
       }
@@ -139,51 +135,83 @@ export function useHeroTerminal() {
     function handleKeyUp(event: KeyboardEvent) {
       switch (event.key) {
         case "ArrowUp": {
-          event.preventDefault()
           previousOption()
           break
         }
         case "ArrowDown": {
-          event.preventDefault()
           nextOption()
           break
         }
         case "Enter": {
-          event.preventDefault()
-          enterOption()
+          if (canSelectOption) {
+            enterOption()
+          }
           break
         }
       }
     }
 
-    function handleScroll(event?: Event) {
-      if (event) event.preventDefault()
+    const OPTION_CLASS = "hero-terminal-option"
 
-      const scrollY = window.scrollY
+    function handleTerminalClick(event?: Event) {
+      const target = event?.target as HTMLElement
 
-      if (scrollY == 0) {
-        document.body.style.overflowY = "hidden"
-      } else {
-        document.body.style.overflowY = "auto"
+      if (target?.classList.contains(OPTION_CLASS)) {
+        return
       }
 
-      setCanSelectOption(scrollY == 0)
+      terminalContainer!.focus()
     }
 
-    handleScroll() // on mount
+    function handleTerminalFocus() {
+      setCanSelectOption(true)
+
+      if (document.activeElement?.classList.contains(OPTION_CLASS)) {
+        return
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" })
+      document.body.style.overflowY = "hidden"
+    }
+
+    function handleTerminalBlur() {
+      document.body.style.overflowY = "auto"
+      setCanSelectOption(false)
+
+      if (document.activeElement?.classList.contains(OPTION_CLASS)) {
+        return
+      }
+    }
+
+    handleTerminalFocus() // on mount
+    handleTerminalClick() // on mount
 
     /*
      * Event listener management
      */
 
     window.addEventListener("keyup", handleKeyUp)
-    window.addEventListener("scroll", handleScroll)
+    if (terminalContainer) {
+      terminalContainer.addEventListener("click", handleTerminalClick)
+      terminalContainer.addEventListener("focus", handleTerminalFocus)
+      terminalContainer.addEventListener("blur", handleTerminalBlur)
+    }
 
     return () => {
       window.removeEventListener("keyup", handleKeyUp)
-      window.removeEventListener("scroll", handleScroll)
+      if (terminalContainer) {
+        window.removeEventListener("click", handleTerminalClick)
+        terminalContainer.removeEventListener("focus", handleTerminalFocus)
+        terminalContainer.removeEventListener("blur", handleTerminalBlur)
+      }
     }
   }, [option])
 
-  return { option, appendOptionRef, canSelectOption, backToTerminal }
+  return {
+    option,
+    appendOptionRef,
+    terminalContainerRef,
+    canSelectOption,
+    backToTerminal,
+  }
 }
