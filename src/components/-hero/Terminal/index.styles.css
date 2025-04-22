@@ -87,7 +87,7 @@
 
   @variant not-focus {
     @apply transition-colors;
-    opacity: 95%;
+    opacity: 90%;
 
     .hero-terminal-buttons {
       .close,
@@ -99,7 +99,7 @@
   }
 
   @variant focus {
-    @apply ring-1;
+    @apply ring-2 ring-heading ring-offset-2 dark:ring-offset-0 ring-offset-background;
   }
 }
 
@@ -120,9 +120,8 @@
   background: var(--color-terminal-background);
 
   .hero-terminal-arrow-up-icon {
-    animation: var(--animate-bounce);
     cursor: pointer;
-    animation-duration: 1s;
+    animation-duration: 3s;
     display: inline-block;
     vertical-align: middle;
     margin-right: calc(var(--spacing) * 1.25);

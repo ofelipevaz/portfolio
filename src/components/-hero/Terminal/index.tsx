@@ -23,7 +23,6 @@ export function HeroTerminal() {
   return (
     <React.Fragment>
       <div ref={terminalContainerRef} className="hero-terminal" tabIndex={0}>
-        <p>{JSON.stringify(canSelectOption)}</p>
         <div className="hero-terminal-buttons">
           <div className="close"></div>
           <div className="minimize"></div>
@@ -102,7 +101,7 @@ export function HeroTerminal() {
           className="hero-terminal-float-back-button"
         >
           <ScreenViewOnly asChild>
-            <IoMdArrowUp className="hero-terminal-arrow-up-icon" size={16} />
+            <IoMdArrowUp className="hero-terminal-arrow-up-icon" size={18} />
           </ScreenViewOnly>
           {tTerminal("display")}
         </button>

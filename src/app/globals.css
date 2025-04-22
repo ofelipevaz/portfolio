@@ -86,6 +86,7 @@
 
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
   min-height: 100vh;
   position: relative;
 
@@ -112,7 +113,6 @@ html {
   }
 
   &.dark::before {
-    /* opacity: 0.025; */
     opacity: 0.05;
   }
 }
